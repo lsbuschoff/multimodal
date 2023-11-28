@@ -1,5 +1,5 @@
 # Have we built machines that think like people?
-Accompanying code for arxiv.org/
+Accompanying code for [arxiv.org/abs/2311.16093](https://arxiv.org/abs/2311.16093)
 
 ### This repository includes: 
 1. The code used to evaluate the models (in */eval*)
