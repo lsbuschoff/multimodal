@@ -8,5 +8,5 @@
 - *exp1_responsibility.RData*: human data for the intuitive psychology experiment collected by Zhou et al. (2023)
 
 **Intuitive psychology**
-- *NUC_DESCRIPTIVES.csv*: includes parsed model reults for descriptive parts of the intuitive psychology experiment
-- *NUC_RESULTS*: includes parsed model reults for tasks 2 and 3 of the intuitive psychology experiment
+- *NUC_DESCRIPTIVES.csv*: includes parsed model results for descriptive parts of the intuitive psychology experiment
+- *NUC_RESULTS*: includes parsed model results and human results from Jara-Ettiner et al. (2020) for tasks 2 and 3 of the intuitive psychology experiment
