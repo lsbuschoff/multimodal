@@ -87,13 +87,42 @@ for epoch in tqdm(range(args.epochs)):
 
                     # Load image
                     prompts += (f'\nEXP_{exp+1}, {seq}: ')
-                    # url = os.path.join(directory, seq) + "/frame_0.png"
                     image = helpers.get_image(seq)
 
                     # Model output
                     response = helpers.get_response(image, instruction, model, image_processor)#, max_tokens=1)
                     prompts += (f'{response}\n')
-            
+
+        # For Smith balance beams
+        elif args.dataset == "BALANCE":
+
+            # Set directory and get list of all images
+            directory = "images/balance"
+            images = glob.glob(f'{directory}/*.png')
+            images = natsorted(images)
+
+            # Loop through experiments
+            for exp in range(3):
+
+                # Loop through images
+                for i, seq in enumerate(images):
+
+                    # Set prompts for relevant experiment
+                    if exp == 0:
+                        instruction = "Q: Consider the following scenario: a friend with a poor sense of balance has built a sculpture using a computer program. He asks you to help him decide whether it will fall, and if so, which way. Please respond with the background color!"
+                    elif exp == 1:
+                        instruction = "Q: Consider the following scenario: a friend with a poor sense of balance has built a sculpture using a computer program. He asks you to help him decide whether it will fall, and if so, which way. Please respond with the number of blocks in the image!"
+                    elif exp == 2:
+                        instruction = "Q: Consider the following scenario: a friend with a poor sense of balance has built a sculpture using a computer program. He asks you to help him decide whether it will fall, and if so, which way. Please respond by answering whether the beam would “tip left”, “stay balanced”, or “tip right”!"  
+                    
+                    # Load image
+                    prompts += (f'\nEXP_{exp+1}, {seq}: ')
+                    image = helpers.get_image(seq)
+
+                    # Model output
+                    response = helpers.get_response(image, instruction, model, image_processor)#, max_tokens=1)
+                    prompts += (f'{response}\n')
+                    
         # For Gerstenberg Jenga
         elif args.dataset == "JENGA":
 
@@ -129,6 +158,66 @@ for epoch in tqdm(range(args.epochs)):
                     response = helpers.get_response(image, instruction, model, image_processor)#, max_tokens=1)
                     prompts += (f'{response}\n')
 
+        # For Michotte stimuli
+        elif args.dataset == "MICHOTTE":
+
+             # Set directory and get list of all images
+            directory = "images/michotte_edit"
+            images = glob.glob(f'{directory}/*.png')
+            images = natsorted(images)
+
+            # Loop through experiments
+            for exp in range(3):
+
+                # Loop through images
+                for i, seq in enumerate(images):
+
+                    # Set prompts for relevant experiment
+                    if exp == 0:
+                        instruction = "Q: The scene shows two balls labeled “A”, and “B”. On the left side there is a pink gate. The solid arrows show the trajectories of the balls. What is the background color?" 
+                    elif exp == 1:
+                        instruction = "Q: The scene shows two balls labeled “A”, and “B”. On the left side there is a pink gate. The solid arrows show the trajectories of the balls. Does ball B enter the gate after it has been hit by ball?"
+                    elif exp == 2:
+                        instruction = "Q: The scene shows two balls labeled “A”, and “B”. On the left side there is a pink gate. The solid arrows show the trajectories of the balls. Would ball B have entered the gate if it had not been hit by ball A?" 
+                        
+                    # Load image
+                    prompts += (f'\nEXP_{exp+1}, {seq}: ')
+                    image = helpers.get_image(seq)
+
+                    # Model output
+                    response = helpers.get_response(image, instruction, model, image_processor)#, max_tokens=1)
+                    prompts += (f'{response}\n')
+
+        # For Baker Bayesian theory of mind stimuli
+        elif args.dataset == "BTOM":
+
+             # Set directory and get list of all images
+            directory = "images/btom_stimuli"
+            images = glob.glob(f'{directory}/*.png')
+            images = natsorted(images)
+
+            # Loop through experiments
+            for exp in range(3):
+
+                # Loop through images
+                for i, seq in enumerate(images):
+
+                    # Set prompts for relevant experiment
+                    if exp == 0:
+                        instruction = "Q: Consider the following scenario: a hungry student leaves his office looking for lunch from one of three food trucks: Korean, Lebanese or Mexican. The university provides only two parking spots, so at most two trucks can be on campus on any given day. The student is marked by a triangle, the three trucks are marked by letters (K, Korean; L, Lebanese; M, Mexican), parking spaces are marked by yellow regions, and buildings (which block movement and line of sight visibility) are marked by black rectangles. In the image you see the trajectory of the student as he is looking for lunch. What is the background color?"
+                    elif exp == 1:
+                        instruction = "Q: Consider the following scenario: a hungry student leaves his office looking for lunch from one of three food trucks: Korean, Lebanese or Mexican. The university provides only two parking spots, so at most two trucks can be on campus on any given day. The student is marked by a triangle, the three trucks are marked by letters (K, Korean; L, Lebanese; M, Mexican), parking spaces are marked by yellow regions, and buildings (which block movement and line of sight visibility) are marked by black rectangles. In the image you see the trajectory of the student as he is looking for lunch. How many food trucks are in the image?"
+                    elif exp == 2:
+                        instruction = "Q: Consider the following scenario: a hungry student leaves his office looking for lunch from one of three food trucks: Korean, Lebanese or Mexican. The university provides only two parking spots, so at most two trucks can be on campus on any given day. The student is marked by a triangle, the three trucks are marked by letters (K, Korean; L, Lebanese; M, Mexican), parking spaces are marked by yellow regions, and buildings (which block movement and line of sight visibility) are marked by black rectangles. In the image you see the trajectory of the student as he is looking for lunch. What is his favorite food truck, and why?"
+                    
+                    # Load image
+                    prompts += (f'\nEXP_{exp+1}, {seq}: ')
+                    image = helpers.get_image(seq)
+
+                    # Model output
+                    response = helpers.get_response(image, instruction, model, image_processor)#, max_tokens=1)
+                    prompts += (f'{response}\n')
+        
         # For Jara-Ettinger Naive Utility Calculus (NUC)
         elif args.dataset == "EXP1A":
 
