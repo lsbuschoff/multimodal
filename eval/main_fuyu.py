@@ -194,7 +194,7 @@ for epoch in tqdm(range(args.epochs)):
                         
                     # Load image
                     prompts += (f'\nEXP_{exp+1}, {seq}: ')
-                    image_pil = Image.open(seq)
+                    image_pil = Image.open(seq).convert("RGB")
 
                     # Pass input to model
                     model_inputs = processor(text=instruction, images=image_pil, return_tensors="pt").to("cuda:0")
