@@ -91,7 +91,47 @@ for epoch in tqdm(range(args.epochs)):
                     prompt = llama.format_prompt(instruction)
                     response = model.generate(img, [prompt])[0]
                     prompts += (f'{response}\n')
-            
+
+        # For Balance stimuli
+        if args.dataset == "BALANCE":
+
+             # Set directory and get list of all images
+            directory = "images/balance"
+            images = glob.glob(f'{directory}/*.png')
+            images = natsorted(images)
+
+            # Loop through experiments
+            for exp in range(3):
+
+                # Loop through images
+                for i, seq in enumerate(images):
+
+                    # Set prompts for relevant experiment
+                    if exp == 0:
+                        instruction = "Q: What is the background color?" # You are only allowed to answer with a number corresponding to the correct background color. No words are allowed!
+                        # options = ["White", "Black", "Red", "Blue", "Yellow", "Green"]
+                        # instruction += helpers.configure_options(options, with_a=False)
+                    
+                    elif exp == 1:
+                        # instruction = "Q: How many blocks are in the image? You are only allowed to answer with the letter corresponding to the correct number of blocks. No words are allowed!"
+                        # options = ["1", "2", "3", "4", "5"]
+                        # instruction += helpers.configure_options(options, letters=True, with_a=False)
+                        instruction = "Q: How many blocks are in the image?" # You are only allowed to answer with a number between 1 and 5 corresponding to the correct number of blocks. No words are allowed!
+                        
+                    elif exp == 2:
+                        instruction = "Q: Is the beam balanced? If not, answer whether it will tip left or tip right."
+
+                    # Load image
+                    prompts += (f'\nEXP_{exp+1}, {seq}: ')
+                    # url = os.path.join(directory, seq) + "/frame_0.png"
+                    img = Image.open(seq)
+                    img = preprocess(img).unsqueeze(0).to(device)
+
+                    # Pass input to model
+                    prompt = llama.format_prompt(instruction)
+                    response = model.generate(img, [prompt])[0]
+                    prompts += (f'{response}\n')
+                    
         # For Gerstenberg Jenga
         elif args.dataset == "JENGA":
 
@@ -130,6 +170,46 @@ for epoch in tqdm(range(args.epochs)):
                     response = model.generate(img, [prompt])[0]
                     prompts += (f'{response}\n')
 
+        # For Balance stimuli
+        if args.dataset == "MICHOTTE":
+
+             # Set directory and get list of all images
+            directory = "images/michotte_edit"
+            images = glob.glob(f'{directory}/*.png')
+            images = natsorted(images)
+
+            # Loop through experiments
+            for exp in range(3):
+
+                # Loop through images
+                for i, seq in enumerate(images):
+
+                    # Set prompts for relevant experiment
+                    if exp == 0:
+                        instruction = "Q: The scene shows two balls labeled A and B. On the left side there is a pink gate. The solid arrows show the trajectories of the balls. What is the background color?" # You are only allowed to answer with a number corresponding to the correct background color. No words are allowed!
+                        # options = ["White", "Black", "Red", "Blue", "Yellow", "Green"]
+                        # instruction += helpers.configure_options(options, with_a=False)
+                    
+                    elif exp == 1:
+                        instruction = "Q: The scene shows two balls labeled A and B. On the left side there is a pink gate. The solid arrows show the trajectories of the balls. Does ball B enter the gate after it has been hit by ball?" # You are only allowed to answer with a number corresponding to the correct background color. No words are allowed!
+                        # options = ["1", "2", "3", "4", "5"]
+                        # instruction += helpers.configure_options(options, letters=True, with_a=False)
+                        instruction = "Q: Does Ball B ?" # You are only allowed to answer with a number between 1 and 5 corresponding to the correct number of blocks. No words are allowed!
+                        
+                    elif exp == 2:
+                        instruction = "Q: The scene shows two balls labeled A and B. On the left side there is a pink gate. The solid arrows show the trajectories of the balls. Would ball B have entered the gate if it had not been hit by ball A?" # You are only allowed to answer with a number corresponding to the correct background color. No words are allowed!
+                        
+                    # Load image
+                    prompts += (f'\nEXP_{exp+1}, {seq}: ')
+                    # url = os.path.join(directory, seq) + "/frame_0.png"
+                    img = Image.open(seq)
+                    img = preprocess(img).unsqueeze(0).to(device)
+
+                    # Pass input to model
+                    prompt = llama.format_prompt(instruction)
+                    response = model.generate(img, [prompt])[0]
+                    prompts += (f'{response}\n')
+                    
        # For Jara-Ettinger Naive Utility Calculus (NUC)
         elif args.dataset == "EXP1A":
 
