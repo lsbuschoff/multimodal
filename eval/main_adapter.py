@@ -93,7 +93,7 @@ for epoch in tqdm(range(args.epochs)):
                     prompts += (f'{response}\n')
 
         # For Balance stimuli
-        if args.dataset == "BALANCE":
+        elif args.dataset == "BALANCE":
 
              # Set directory and get list of all images
             directory = "images/balance"
@@ -113,6 +113,7 @@ for epoch in tqdm(range(args.epochs)):
                         instruction = "Q: Consider the following scenario: a friend with a poor sense of balance has built a sculpture using a computer program. He asks you to help him decide whether it will fall, and if so, which way. Please respond with the number of blocks in the image!"
                     elif exp == 2:
                         instruction = "Q: Consider the following scenario: a friend with a poor sense of balance has built a sculpture using a computer program. He asks you to help him decide whether it will fall, and if so, which way. Please respond by answering whether the beam would “tip left”, “stay balanced”, or “tip right”!"  
+                    
                     # Load image
                     prompts += (f'\nEXP_{exp+1}, {seq}: ')
                     img = Image.open(seq)
@@ -162,7 +163,7 @@ for epoch in tqdm(range(args.epochs)):
                     prompts += (f'{response}\n')
 
         # For Balance stimuli
-        if args.dataset == "MICHOTTE":
+        elif args.dataset == "MICHOTTE":
 
              # Set directory and get list of all images
             directory = "images/michotte_edit"
@@ -194,7 +195,7 @@ for epoch in tqdm(range(args.epochs)):
                     prompts += (f'{response}\n')
 
         # For Balance stimuli
-        if args.dataset == "BTOM":
+        elif args.dataset == "BTOM":
 
              # Set directory and get list of all images
             directory = "images/btom_stimuli"
@@ -225,7 +226,7 @@ for epoch in tqdm(range(args.epochs)):
                     response = model.generate(img, [prompt])[0]
                     prompts += (f'{response}\n')
                     
-       # For Jara-Ettinger Naive Utility Calculus (NUC)
+        # For Jara-Ettinger Naive Utility Calculus (NUC)
         elif args.dataset == "EXP1A":
 
             # Add first frame of sequence to list
@@ -295,7 +296,7 @@ for epoch in tqdm(range(args.epochs)):
                     response = model.generate(img, [prompt])[0]
                     prompts += (f'{response}\n')
 
- # For Jara-Ettinger Naive Utility Calculus (NUC)
+         # For Jara-Ettinger Naive Utility Calculus (NUC)
         elif args.dataset == "EXP1B":
 
             # Add first frame of sequence to list
