@@ -97,7 +97,7 @@ for epoch in tqdm(range(args.epochs)):
         # For Balance stimuli
         elif args.dataset == "BALANCE":
 
-             # Set directory and get list of all images
+            # Set directory and get list of all images
             directory = "images/balance"
             images = glob.glob(f'{directory}/*.png')
             images = natsorted(images)
