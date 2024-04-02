@@ -13,8 +13,10 @@ import numpy as np
 from PIL import Image
 from tqdm import tqdm
 from torchvision.transforms import functional
+from natsort import natsorted
 
 # Get access to LLaMA folder
+sys.path.append("../../LLaMA-Adapter/")
 from llama_adapter_v2_multimodal7b import llama
 
 # Init parser and set defaults
@@ -31,7 +33,7 @@ torch.manual_seed(args.seed)
 if torch.cuda.is_available():
     torch.cuda.manual_seed(args.seed)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-llama_dir = "/ptmp/mbinz/new/"
+llama_dir = "../../llama_model_weights"
 
 # Create directory if it does not yet exist and save args
 model_str = f"results/{args.model}_{args.dataset}_seed_{args.seed}"
@@ -40,10 +42,8 @@ with open(f'{model_str}/args', 'w') as f:
     json.dump(args.__dict__, f, indent=4)
 
 # Load model (choose from BIAS-7B, LORA-BIAS-7B)
-model, preprocess = llama.load("BIAS-7B", llama_dir, device)
+model, preprocess = llama.load("BIAS-7B", llama_dir, llama_type="7B", device=device)
 model.eval()
-img_dir = "../lerer/images/"
-images = os.listdir(img_dir)
 prompts = 'Experiment start \n\n'
 
 # Input shape: (batch_size, len_sequence_train, num_input_channels, 64, 64)
@@ -55,9 +55,10 @@ for epoch in tqdm(range(args.epochs)):
         # For Lerer cubes
         if args.dataset == "CUBES":
 
-            # Set directory and get list of all images
-            directory = "../lerer/images"
-            images = os.listdir(directory)
+             # Set directory and get list of all images
+            directory = "images/lerer"
+            images = glob.glob(f'{directory}/*.png')
+            images = natsorted(images)
 
             # Loop through experiments
             for exp in range(3):
@@ -81,9 +82,9 @@ for epoch in tqdm(range(args.epochs)):
                         instruction = "Q: Will this block tower fall? Give a boolean answer."
 
                     # Load image
-                    prompts += (f'\nEXP_{exp+1}, SEQ_{seq}: ')
-                    url = os.path.join(directory, seq) + "/frame_0.png"
-                    img = Image.open(url)
+                    prompts += (f'\nEXP_{exp+1}, {seq}: ')
+                    # url = os.path.join(directory, seq) + "/frame_0.png"
+                    img = Image.open(seq)
                     img = preprocess(img).unsqueeze(0).to(device)
 
                     # Pass input to model

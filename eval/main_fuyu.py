@@ -4,14 +4,16 @@ import os
 import helpers
 import torch
 import glob
-from transformers import FuyuForCausalLM, AutoTokenizer, FuyuProcessor, FuyuImageProcessor
-from PIL import Image
 import numpy as np
 import jsonlines
+from transformers import FuyuForCausalLM, AutoTokenizer, FuyuProcessor, FuyuImageProcessor
+from PIL import Image
 from tqdm import tqdm
+from natsort import natsorted
 
 # Get access to otter folder
 pretrained_path = "../fuyu-8b"
+model_id = "adept/fuyu-8b"
 
 # Init parser and set defaults
 parser = argparse.ArgumentParser(description='MMLLM')
@@ -38,10 +40,10 @@ with open(f'{model_str}/args', 'w') as f:
     json.dump(args.__dict__, f, indent=4)
 
 # Model settings
-tokenizer = AutoTokenizer.from_pretrained(pretrained_path)
+tokenizer = AutoTokenizer.from_pretrained(model_id)
 image_processor = FuyuImageProcessor()
 processor = FuyuProcessor(image_processor=image_processor, tokenizer=tokenizer)
-model = FuyuForCausalLM.from_pretrained(pretrained_path, device_map="cuda:0", torch_dtype=torch.bfloat16)
+model = FuyuForCausalLM.from_pretrained(model_id, device_map="cuda:0", torch_dtype=torch.bfloat16)
 model.eval()
 prompts = 'Experiment start \n\n'
 
@@ -55,8 +57,9 @@ for epoch in tqdm(range(args.epochs)):
         if args.dataset == "CUBES":
 
             # Set directory and get list of all images
-            directory = "../lerer/images"
-            images = os.listdir(directory)
+            directory = "images/lerer"
+            images = glob.glob(f'{directory}/*.png')
+            images = natsorted(images)
 
             # Loop through experiments
             for exp in range(3):
@@ -80,14 +83,12 @@ for epoch in tqdm(range(args.epochs)):
                         instruction = "Q: Will this block tower fall? Give a boolean answer."
 
                     # Load image
-                    prompts += (f'\nEXP_{exp+1}, SEQ_{seq}: ')
-                    url = os.path.join(directory, seq) + "/frame_0.png"
-                    image_pil = Image.open(url)
+                    prompts += (f'\nEXP_{exp+1}, {seq}: ')
+                    # url = os.path.join(directory, seq) # + "/frame_0.png"
+                    image_pil = Image.open(seq)
 
                     # Pass input to model
-                    model_inputs = processor(text=instruction, images=[image_pil], device="cuda:0")
-                    for k, v in model_inputs.items():
-                        model_inputs[k] = v.to("cuda:0")
+                    model_inputs = processor(text=instruction, images=image_pil, return_tensors="pt").to("cuda:0")
 
                     # Model output
                     generation_output = model.generate(**model_inputs, max_new_tokens=7)

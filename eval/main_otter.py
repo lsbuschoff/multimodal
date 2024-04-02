@@ -9,9 +9,10 @@ import jsonlines
 import glob
 import numpy as np
 from tqdm import tqdm
+from natsort import natsorted
 
 # Get access to otter folder
-sys.path.append("../Otter/src")
+sys.path.append("../../Otter/src")
 from otter_ai.models.otter.modeling_otter import OtterForConditionalGeneration
 
 # Init parser and set defaults
@@ -59,8 +60,9 @@ for epoch in tqdm(range(args.epochs)):
         if args.dataset == "CUBES":
 
             # Set directory and get list of all images
-            directory = "../lerer/images"
-            images = os.listdir(directory)
+            directory = "images/lerer"
+            images = glob.glob(f'{directory}/*.png')
+            images = natsorted(images)
 
             # Loop through experiments
             for exp in range(3):
@@ -84,9 +86,9 @@ for epoch in tqdm(range(args.epochs)):
                         instruction = "Q: Will this block tower fall? Give a boolean answer."
 
                     # Load image
-                    prompts += (f'\nEXP_{exp+1}, SEQ_{seq}: ')
-                    url = os.path.join(directory, seq) + "/frame_0.png"
-                    image = helpers.get_image(url)
+                    prompts += (f'\nEXP_{exp+1}, {seq}: ')
+                    # url = os.path.join(directory, seq) + "/frame_0.png"
+                    image = helpers.get_image(seq)
 
                     # Model output
                     response = helpers.get_response(image, instruction, model, image_processor)#, max_tokens=1)
