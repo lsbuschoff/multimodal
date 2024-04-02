@@ -183,6 +183,7 @@ for epoch in tqdm(range(args.epochs)):
                     # Load image
                     prompts += (f'\nEXP_{exp+1}, {seq}: ')
                     image = helpers.get_image(seq)
+                    image = image.convert("RGB")
 
                     # Model output
                     response = helpers.get_response(image, instruction, model, image_processor)#, max_tokens=1)
