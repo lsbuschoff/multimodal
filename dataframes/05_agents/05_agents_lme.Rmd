@@ -15,13 +15,12 @@ library(ggfortify)
 subjects = list("FUYU", "OTTER", "ADAPTER", "GPT-4V", "CLAUDE-3", "HUMAN")
 experiments = list("intention", "counterfactual")
 setwd("~/Documents/Projects/multimodal/dataframes/05_agents")
-
-# Pre-allocate output array
-out_intention <- matrix(data=NA,nrow=length(subjects),ncol=3)
-out_counterfactual <- matrix(data=NA,nrow=length(subjects),ncol=3)
 ```
 
 ```{r}
+# Pre-allocate output array
+out <- matrix(data=NA,nrow=length(subjects),ncol=3)
+
 for (ind in seq_along(subjects)) {
   
   # Load data for each individual model
@@ -33,25 +32,31 @@ for (ind in seq_along(subjects)) {
     
     # Z-Scale individual humans
     temp <- temp %>%
-      group_by(Ind) %>%
-      mutate(Human_z = scale(Human)[,1]) %>%
-      ungroup()
+      mutate(Human_z = scale(Human)) 
   
     # Regression with random slope but no intercept (fixed at 0)
-    temp.lm <- brm(scale(Model)~-1+Human_z+(-1+Human_z|Ind), data=temp, iter=4000, control = list(adapt_delta = 0.95))
-    print(summary(temp.lm))
+    temp.lm <- brm(scale(Model)~1+Human_z+(1+Human_z|Ind), data=temp, iter=4000, control = list(adapt_delta = 0.95))
     
-    # Save to output
-    out_intention[ind, 1] = fixef(temp.lm)[1]
-    out_intention[ind, 2] = fixef(temp.lm)[3]
-    out_intention[ind, 3] = fixef(temp.lm)[4]
+    # Print output
+    print(summary(temp.lm))
+    print(bayes_R2(temp.lm))
+    R2 <- bayes_R2(temp.lm)
+    
+    # Multiply with sign of coefficient again and save to output
+    out[ind, 1] = sign(fixef(temp.lm)[2, 1]) * sqrt(R2[1])
+    out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+    out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
   }
 }
 
 # Write
-write.table(out_intention, file="05_intention_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
+write.table(out, file="05_intention_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
 ```
+
 ```{r}
+# Pre-allocate output array
+out <- matrix(data=NA,nrow=length(subjects),ncol=3)
+
 for (ind in seq_along(subjects)) {
   
   # Load data for each individual model
@@ -63,21 +68,23 @@ for (ind in seq_along(subjects)) {
     
     # Z-Scale individual humans
     temp <- temp %>%
-      group_by(Ind) %>%
-      mutate(Human_z = scale(Human)[,1]) %>%
-      ungroup()
+      mutate(Human_z = scale(Human)) 
   
     # Regression with random slope but no intercept (fixed at 0)
-    temp.lm <- brm(scale(Model)~-1+Human_z+(-1+Human_z|Ind), data=temp, iter=4000, control = list(adapt_delta = 0.95))
-    print(summary(temp.lm))
+    temp.lm <- brm(scale(Model)~1+Human_z+(1+Human_z|Ind), data=temp, iter=4000, control = list(adapt_delta = 0.95))
     
-    # Save to output
-    out_counterfactual[ind, 1] = fixef(temp.lm)[1]
-    out_counterfactual[ind, 2] = fixef(temp.lm)[3]
-    out_counterfactual[ind, 3] = fixef(temp.lm)[4]
+    # Print output
+    print(summary(temp.lm))
+    print(bayes_R2(temp.lm))
+    R2 <- bayes_R2(temp.lm)
+    
+    # Multiply with sign of coefficient again and save to output
+    out[ind, 1] = sign(fixef(temp.lm)[2, 1]) * sqrt(R2[1])
+    out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+    out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
   }
 }
 
 # Write
-write.table(out_counterfactual, file="05_counterfactual_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
+write.table(out, file="05_counterfactual_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
 ```

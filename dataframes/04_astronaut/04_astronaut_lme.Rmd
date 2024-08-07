@@ -13,13 +13,12 @@ library(stringr)
 # Set variables
 subjects = list("FUYU", "OTTER", "ADAPTER", "GPT-4V", "CLAUDE-3")
 setwd("~/Documents/Projects/multimodal/dataframes/04_astronaut")
-
-# Pre-allocate output array
-out_cost <- matrix(data=NA,nrow=length(subjects),ncol=3)
-out_reward <- matrix(data=NA,nrow=length(subjects),ncol=3)
 ```
 
 ```{r}
+# Pre-allocate output array
+out <- matrix(data=NA,nrow=length(subjects),ncol=3)
+
 for (ind in seq_along(subjects)) {
   
   # Load data for each individual model
@@ -29,14 +28,19 @@ for (ind in seq_along(subjects)) {
   # Only compute model if there is more than 1 non NA response
   if (sum(!is.na(unique(temp$Model))) > 1) {
   
-    # Regression with random slope but no intercept (fixed at 0)
-    temp.lm <- brm(scale(Model)~-1+Human, data=temp, iter=4000, control = list(adapt_delta = 0.95))
-    print(summary(temp.lm))
+    # Human answers are already z-scaled from the original data 
+    # Since only mean is available we can't fit random slopes here
+    temp.lm <- brm(scale(Model)~1+Human, data=temp, iter=4000, control = list(adapt_delta = 0.95))
     
-    # Save to output
-    out[ind, 1] = fixef(temp.lm)[1]
-    out[ind, 2] = fixef(temp.lm)[3]
-    out[ind, 3] = fixef(temp.lm)[4]
+    # Print output
+    print(summary(temp.lm))
+    print(bayes_R2(temp.lm))
+    R2 <- bayes_R2(temp.lm)
+    
+    # Multiply with sign of coefficient again and save to output
+    out[ind, 1] = sign(fixef(temp.lm)[2, 1]) * sqrt(R2[1])
+    out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+    out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
   }
 }
 
@@ -45,6 +49,9 @@ write.table(out, file="04_cost_lmer.csv", sep = ",", row.names = TRUE, col.names
 ```
 
 ```{r}
+# Pre-allocate output array
+out <- matrix(data=NA,nrow=length(subjects),ncol=3)
+
 for (ind in seq_along(subjects)) {
   
   # Load data for each individual model
@@ -54,14 +61,19 @@ for (ind in seq_along(subjects)) {
   # Only compute model if there is more than 1 non NA response
   if (sum(!is.na(unique(temp$Model))) > 1) {
   
-    # Regression with random slope but no intercept (fixed at 0)
-    temp.lm <- brm(scale(Model)~-1+Human, data=temp, iter=4000, control = list(adapt_delta = 0.95))
-    print(summary(temp.lm))
+    # Human answers are already z-scaled from the original data 
+    # Since only mean is available we can't fit random slopes here
+    temp.lm <- brm(scale(Model)~1+Human, data=temp, iter=4000, control = list(adapt_delta = 0.95))
     
-    # Save to output
-    out[ind, 1] = fixef(temp.lm)[1]
-    out[ind, 2] = fixef(temp.lm)[3]
-    out[ind, 3] = fixef(temp.lm)[4]
+    # Print output
+    print(summary(temp.lm))
+    print(bayes_R2(temp.lm))
+    R2 <- bayes_R2(temp.lm)
+    
+    # Multiply with sign of coefficient again and save to output
+    out[ind, 1] = sign(fixef(temp.lm)[2, 1]) * sqrt(R2[1])
+    out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+    out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
   }
 }
 
