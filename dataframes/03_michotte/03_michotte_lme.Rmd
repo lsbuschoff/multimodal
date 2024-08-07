@@ -1,0 +1,101 @@
+---
+title: "03_michotte_lme"
+output: html_notebook
+---
+
+```{r}
+# Install packages
+library(brms)
+library(lme4)
+library(tidyverse)
+library(stringr)
+
+# Set variables
+subjects = list("FUYU", "OTTER", "ADAPTER", "GPT-4V", "CLAUDE-3", "HUMAN")
+setwd("~/Documents/Projects/multimodal/dataframes/03_michotte")
+```
+
+```{r}
+# Pre-allocate output array
+out <- matrix(data=NA,nrow=length(subjects),ncol=3)
+
+for (ind in seq_along(subjects)) {
+  
+  # Load data for each individual model
+  print(str_glue("{subjects[[ind]]}"))
+  temp <- read.csv(str_glue("{subjects[[ind]]}_outcome.csv"))
+  
+  # Only compute model if there is more than 1 non NA response
+  if (sum(!is.na(unique(temp$Model))) > 1) {
+    
+    # Z-Scale individual humans
+    temp <- temp %>%
+      mutate(Human_z = scale(Human)) 
+  
+    # Regression with random slope but no intercept (fixed at 0)
+    temp.lm <- brm(scale(Model)~1+Human_z+(1+Human_z|Ind), data=temp, iter=4000, control = list(adapt_delta = 0.95))
+    
+    # Print output
+    print(summary(temp.lm))
+    print(bayes_R2(temp.lm))
+    R2 <- bayes_R2(temp.lm)
+    
+    # Multiply with sign of coefficient again and save to output
+    out[ind, 1] = sign(fixef(temp.lm)[2, 1]) * sqrt(R2[1])
+    out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+    out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
+  }
+}
+
+# Write
+write.table(out, file="03_outcome_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
+```
+
+```{r}
+# Pre-allocate output array
+out <- matrix(data=NA,nrow=length(subjects),ncol=3)
+
+for (ind in seq_along(subjects)) {
+  
+  # Load data for each individual model
+  print(str_glue("{subjects[[ind]]}"))
+  temp <- read.csv(str_glue("{subjects[[ind]]}_counterfactual.csv"))
+  
+  # Only compute model if there is more than 1 non NA response
+  if (sum(!is.na(unique(temp$Model))) > 1) {
+    
+    # Z-Scale individual humans
+    temp <- temp %>%
+      group_by(Ind) %>%
+      mutate(Human_z = scale(Human)[,1]) %>%
+      ungroup()
+  
+    # Regression with random slope but no intercept (fixed at 0)
+    temp.lm <- brm(scale(Model)~1+Human_z+(1+Human_z|Ind), data=temp, iter=4000, control = list(adapt_delta = 0.95))
+    
+    # Print output
+    print(summary(temp.lm))
+    print(bayes_R2(temp.lm))
+    R2 <- bayes_R2(temp.lm)
+    
+    # Multiply with sign of coefficient again 
+    coefsign = sign(fixef(temp.lm)[2, 1])
+    out[ind, 1] = coefsign * sqrt(abs(R2[1]))
+    
+    # If positive then order of CIs is correct
+    if (coefsign == 1) {
+      out[ind, 2] = coefsign * sqrt(abs(R2[3]))
+      out[ind, 3] = coefsign * sqrt(abs(R2[4]))
+      
+    # If negative, CIs have to be flipped
+    } else {
+      out[ind, 3] = coefsign * sqrt(abs(R2[3]))
+      out[ind, 2] = coefsign * sqrt(abs(R2[4]))
+    }
+  }
+}
+
+# Write
+write.table(out, file="03_counterfactual_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
+```
+

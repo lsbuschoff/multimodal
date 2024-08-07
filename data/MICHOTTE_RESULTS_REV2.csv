@@ -1,0 +1,73 @@
+SEQ,COND,FUYU,OTTER,ADAPTER,GPT-4V,CLAUDE-3
+1,color,pink,NA,white,white,white
+2,color,pink,white,blue,white,white
+3,color,pink,black,white,white,white
+4,color,pink,white,blue,white,white
+5,color,pink,white,white,white,white
+6,color,pink,white,white,white,white
+7,color,pink,white,blue,white,white
+8,color,pink,NA,white,white,white
+9,color,pink,white,white,white,white
+10,color,pink,black,white,white,white
+11,color,pink,white,blue,white,white
+12,color,pink,white,white,white,white
+13,color,pink,black,white,white,white
+14,color,pink,white,white,white,white
+15,color,pink,black,white,white,white
+16,color,pink,black,white,white,white
+17,color,pink,black,white,white,white
+18,color,pink,white,white,white,white
+1,trajectory,left to right,right to left,left to right,left to right,left to right
+2,trajectory,left to right,right to left,left to right,right to left,left to right
+3,trajectory,left to right,left to right,left to right,right to left,left to right
+4,trajectory,left to right,right to left,left to right,left to right,left to right
+5,trajectory,left to right,left to right,left to right,left to right,left to right
+6,trajectory,left to right,right to left,left to right,left to right,left to right
+7,trajectory,left to right,right to left,left to right,left to right,left to right
+8,trajectory,left to right,right to left,left to right,left to right,left to right
+9,trajectory,left to right,right to left,left to right,left to right,left to right
+10,trajectory,left to right,left to right,left to right,left to right,left to right
+11,trajectory,left to right,right to left,left to right,right to left,left to right
+12,trajectory,left to right,right to left,left to right,right to left,left to right
+13,trajectory,left to right,left to right,left to right,right to left,right to left
+14,trajectory,left to right,right to left,left to right,left to right,left to right
+15,trajectory,left to right,left to right,left to right,right to left,left to right
+16,trajectory,left to right,right to left,left to right,right to left,right to left
+17,trajectory,left to right,right to left,left to right,right to left,left to right
+18,trajectory,left to right,right to left,left to right,right to left,left to right
+1,outcome,0,100,NA,100,100
+2,outcome,NA,20,NA,100,100
+3,outcome,0,100,NA,100,100
+4,outcome,NA,50,NA,100,100
+5,outcome,NA,20,NA,100,100
+6,outcome,0,100,NA,100,100
+7,outcome,NA,100,NA,100,100
+8,outcome,NA,50,NA,0,0
+9,outcome,NA,20,NA,0,100
+10,outcome,NA,50,NA,0,0
+11,outcome,NA,20,NA,0,100
+12,outcome,0,100,100,0,100
+13,outcome,100,50,100,0,0
+14,outcome,0,NA,NA,0,0
+15,outcome,NA,90,100,0,0
+16,outcome,NA,100,NA,0,0
+17,outcome,NA,100,NA,100,100
+18,outcome,NA,100,100,0,0
+1,counterfactual,0,90,NA,100,100
+2,counterfactual,0,90,NA,100,100
+3,counterfactual,0,90,NA,100,90
+4,counterfactual,NA,90,NA,100,100
+5,counterfactual,0,90,NA,100,90
+6,counterfactual,NA,90,NA,100,100
+7,counterfactual,0,90,NA,100,90
+8,counterfactual,0,90,NA,100,90
+9,counterfactual,0,90,NA,100,90
+10,counterfactual,0,90,NA,100,100
+11,counterfactual,NA,90,NA,100,100
+12,counterfactual,0,90,100,100,100
+13,counterfactual,0,100,NA,100,100
+14,counterfactual,0,90,NA,100,100
+15,counterfactual,0,90,NA,100,100
+16,counterfactual,NA,90,NA,100,100
+17,counterfactual,0,90,NA,100,90
+18,counterfactual,100,90,NA,100,100

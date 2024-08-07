@@ -1,0 +1,301 @@
+Image,Experiment,GT,GPT-4V,FUYU,ADAPTER,OTTER,CLAUDE-3,,,,,,,,,,,,,,,,P3
+1,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+3,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+5,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+7,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+18,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+20,1,White,White,White,White,White,Beige,,,,,,,,,,,,,,,,White
+22,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,White
+38,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+40,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,White
+42,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,White
+44,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+62,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,White
+63,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+64,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+65,1,White,White,White,White,White,Beige,,,,,,,,,,,,,,,,
+67,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+85,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+87,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+89,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+91,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+105,1,White,White,White,White,White,Beige,,,,,,,,,,,,,,,,
+111,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+121,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,White
+125,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+126,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+131,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+132,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+146,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+147,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+152,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+166,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+167,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+172,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+173,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+187,1,White,White,White,White,White,Beige,,,,,,,,,,,,,,,,
+188,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+193,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+194,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+213,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+214,1,White,White,White,White,White,Beige,,,,,,,,,,,,,,,,White
+217,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+234,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+237,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+238,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+240,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+254,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+258,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+259,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+260,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+261,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+275,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+279,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+280,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+281,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+285,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+295,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+299,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+304,1,White,White,White,Blue,White,White,,,,,,,,,,,,,,,,
+305,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+310,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+311,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+319,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+325,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+326,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+331,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+346,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+351,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+352,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+366,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+367,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+372,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+373,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+387,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+388,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,White
+392,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+393,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+413,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+416,1,White,White,White,White,White,Beige,,,,,,,,,,,,,,,,
+417,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+433,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+434,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,White
+437,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+438,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+440,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+454,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,White
+458,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+460,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+464,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+474,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,White
+478,1,White,White,White,Blue,White,Gray,,,,,,,,,,,,,,,,
+479,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+480,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+481,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+484,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+485,1,White,White,White,White,White,White,,,,,,,,,,,,,,,,
+499,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+504,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+505,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+509,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+510,1,White,White,White,White,White,Gray,,,,,,,,,,,,,,,,
+1,2,"yellow, red, green","yellow, red, green","green, yellow, red","blue, green, yellow","green, yellow, red","yellow, red, green",,,,,,,,,,,,,,,,
+3,2,"yellow, red, green","yellow, red, green","green, yellow, red","blue, green, yellow","red, yellow, green","yellow, red, green",,,,,,,,,,,,,,,,
+5,2,"yellow, red, green","yellow, red, green","yellow, red, green","blue, green, yellow","red, yellow, green","yellow, red green",,,,,,,,,,,,,,,,
+7,2,"yellow, red, green","yellow, red, green","yellow, red, green","blue, green, yellow","green, yellow, red",yellow red green,,,,,,,,,,,,,,,,
+18,2,"yellow, green, blue","yellow, green, blue","green, yellow, blue","green, blue, red","green, yellow, blue","yellow, blue, green",,,,,,,,,,,,,,,,
+20,2,"green, blue, red, yellow","green, blue, red, yellow","green, blue, red,","green, blue, yellow","blue, red, yellow","green, blue, red, yellow",,,,,,,,,,,,,,,,4
+22,2,"green, blue, red, yellow","green, blue, red, yellow","green, blue, red,","green, blue, yellow","blue, red, yellow","green, blue, red, yellow",,,,,,,,,,,,,,,,3
+38,2,"yellow, red, blue, green","yellow, red, blue, green","yellow, red, green, blue","blue, green, yellow","blue, red, yellow","yellow, red, blue, green",,,,,,,,,,,,,,,,
+40,2,"yellow, red, blue, green","yellow, red, blue, green","red, yellow, green, blue","blue, green, yellow","blue, red, yellow","yellow, red, blue, green",,,,,,,,,,,,,,,,4
+42,2,"yellow, red, blue, green","yellow, red, blue, green","yellow, red, green, blue","blue, green, yellow","red, yellow, green","yellow, red, blue, green",,,,,,,,,,,,,,,,2
+44,2,"blue, yellow, red, green","blue, yellow, red, green","yellow, green, red, blue","blue, green, yellow","blue, red, yellow","blue, yellow, red",,,,,,,,,,,,,,,,4
+62,2,"red, green","red, green","green, red","blue, green, yellow","red, green, blue","red, green",,,,,,,,,,,,,,,,4
+63,2,"red, green","red, green","red, green","green, blue, green","red, green, blue","red, green",,,,,,,,,,,,,,,,
+64,2,"yellow, green","yellow, green"," green, yellow","blue, green, white","green, yellow, white","yellow, green",,,,,,,,,,,,,,,,4
+65,2,"yellow, green","yellow, green"," green, yellow","green, blue, green","green, yellow, blue","yellow, green",,,,,,,,,,,,,,,,
+67,2,"yellow, green","yellow, green"," green, yellow","green, blue, yellow","green, yellow, blue","yellow, green",,,,,,,,,,,,,,,,
+85,2,"yellow, blue, green, red","yellow, blue, green, red","green, blue, red,","blue, green, yellow","blue, yellow, green","yellow, blue, green, red",,,,,,,,,,,,,,,,
+87,2,"yellow, blue, green, red","yellow, blue, green, red","yellow, blue, green, red","blue, green, yellow","green, yellow, red","yellow, blue, green, red",,,,,,,,,,,,,,,,
+89,2,"blue, yellow, green, red","blue, yellow, green, red","green, yellow, blue, red","blue, green, yellow","green, blue, red","blue, green, red",,,,,,,,,,,,,,,,
+91,2,"red, yellow, green","red, yellow, green","yellow, red, green,","blue, green, red","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+105,2,"blue, red, yellow","blue, red, yellow","red, yellow, blue","blue, red, yellow","blue, red, yellow","red, yellow, blue",,,,,,,,,,,,,,,,
+111,2,"blue, red, yellow","blue, red, yellow","yellow, red, blue","blue, green, orange","blue, red, yellow","blue, red, yellow",,,,,,,,,,,,,,,,
+121,2,"blue, yellow, green, red","blue, yellow, green, red","green, yellow, red, blue","green, blue, yellow","green, yellow, red","blue, yellow, green, red",,,,,,,,,,,,,,,,4
+125,2,"yellow, green, blue, red","yellow, green, blue, red","green, yellow, blue, red","blue, green, red","blue, yellow, red","yellow, green, blue, red",,,,,,,,,,,,,,,,
+126,2,"green, blue, yellow, red","green, blue, yellow, red","green, yellow, red, blue","green, blue, yellow","green, yellow, red","green, blue, yellow, red",,,,,,,,,,,,,,,,
+131,2,"yellow, blue, green, red","yellow, blue, green, red","green, yellow, blue, red","blue, green, yellow, red","green, yellow, red","yellow, green, blue, red",,,,,,,,,,,,,,,,
+132,2,"yellow, blue, green, red","yellow, blue, green, red","green, blue, yellow, red","blue, green, yellow","green, yellow, red","yellow, green, blue, red",,,,,,,,,,,,,,,,
+146,2,"blue, green, yellow, red","blue, green, yellow, red","green, yellow, red, blue","blue, green, yellow, red","red, yellow, green, blue","blue, green, yellow, red",,,,,,,,,,,,,,,,
+147,2,"blue, green, yellow, red","blue, green, yellow, red","green, yellow, red, blue","blue, green, yellow, red","green, yellow, red","blue, green, yellow, red",,,,,,,,,,,,,,,,
+152,2,"blue, red, green, yellow","blue, red, green, yellow","red, yellow, green, blue","blue, green, yellow, red","blue, yellow, red","blue, red, green, yellow",,,,,,,,,,,,,,,,
+166,2,"red, yellow","red, yellow","yellow, red, yellow","blue, blue, blue","red, yellow, gray","red, yellow",,,,,,,,,,,,,,,,
+167,2,"red, yellow","red, yellow, green","yellow, red, yellow","blue, blue, blue","red, yellow, gray","red, yellow",,,,,,,,,,,,,,,,
+172,2,"red, yellow","red, yellow","yellow, red, yellow","blue, green, blue","red, yellow, gray","red, yellow",,,,,,,,,,,,,,,,
+173,2,"red, yellow","red, yellow","yellow, red","blue, blue, blue","red, yellow, gray","red, yellow",,,,,,,,,,,,,,,,
+187,2,"yellow, green","yellow, green"," green, yellow","green, blue, green","green, yellow, blue","yellow, green",,,,,,,,,,,,,,,,
+188,2,"green, red","green, red","green, red","blue, green, yellow","green, red, blue","green, red",,,,,,,,,,,,,,,,
+193,2,"green, red","green, red","green, red, yellow","blue, green, white","green, red, white","green, red",,,,,,,,,,,,,,,,
+194,2,"green, red","green, red","green, red, yellow","blue, green, yellow","green, red, and blue","green, red",,,,,,,,,,,,,,,,
+213,2,"blue, red, yellow, green","blue, red, yellow, green","red, yellow, green, blue","blue, green, yellow, red","red, yellow, blue","blue, red, yellow, green",,,,,,,,,,,,,,,,
+214,2,"blue, red, yellow, green","blue, red, yellow, green","red, yellow, green, blue","blue, green, yellow, red","red, blue, yellow","blue, red, yellow, green",,,,,,,,,,,,,,,,3
+217,2,"yellow, red, blue, green","yellow, red, blue, green","yellow, red, green, blue","blue, green, yellow, red","red, yellow, green, blue","yellow, red, blue, green",,,,,,,,,,,,,,,,
+234,2,"green, blue, red","green, blue, red","red, blue, green","green, blue, yellow","blue, green, red","green, blue, red",,,,,,,,,,,,,,,,4
+237,2,"green, red, blue","green, red, blue","green, red, blue","green, blue, yellow","red, green, blue","green, red, blue",,,,,,,,,,,,,,,,
+238,2,"green, red, blue","green, red, blue","red, green, blue","green, blue, yellow","red, green, blue","green, red, blue",,,,,,,,,,,,,,,,
+240,2,"green, blue, red","green, blue, red","red, blue, green","green, blue, yellow","green, red, blue","green, blue, red",,,,,,,,,,,,,,,,
+254,2,"green, blue","green, blue","green, blue","green, orange, red","green, blue, green","green, blue",,,,,,,,,,,,,,,,3
+258,2,"yellow, green","yellow, green"," yellow, green","green, blue, yellow","green, yellow, blue","yellow, green",,,,,,,,,,,,,,,,
+259,2,"yellow, green","yellow, green","yellow, green, gray","green, blue, yellow","green, yellow, blue","yellow, green",,,,,,,,,,,,,,,,
+260,2,"green, yellow","green, yellow"," green, yellow","green, blue, yellow","green, yellow, red","green, yellow",,,,,,,,,,,,,,,,
+261,2,"green, yellow","green, yellow"," green, yellow","green, blue, green","green, yellow, green","green, yellow",,,,,,,,,,,,,,,,
+275,2,"red, yellow, blue, green","red, yellow, blue, green","red, yellow, green, blue","blue, green, yellow","red, yellow, green, blue","red, yellow, blue, green",,,,,,,,,,,,,,,,4
+279,2,"blue, yellow, red, green","blue, yellow, red, green","red, yellow, green, blue","blue, green, yellow, red","blue, yellow, red","blue, yellow, red, green",,,,,,,,,,,,,,,,
+280,2,"blue, yellow, red, green","blue, yellow, red, green","yellow, red, green, blue","blue, green, yellow, red","blue, red, yellow","blue, yellow, red, green",,,,,,,,,,,,,,,,
+281,2,"blue, yellow, red, green","blue, yellow, red, green","yellow, red, green, blue","blue, green, yellow, red","blue, red, yellow","blue, yellow, red, green",,,,,,,,,,,,,,,,
+285,2,"blue, yellow, red, green","blue, yellow, red, green","red, yellow, green, blue","blue, green, red","blue, yellow, green","blue, yellow, red, green",,,,,,,,,,,,,,,,
+295,2,"yellow, red, green","yellow, red, green","red, yellow, green","blue, green, yellow","red, yellow, green","yellow, red, green",,,,,,,,,,,,,,,,2
+299,2,"red, yellow, green","red, yellow, green","yellow, green, red","blue, green, yellow","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+304,2,"red, yellow, green","red, yellow, green","yellow, green, red","blue, green, yellow","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+305,2,"red, yellow, green","red, yellow, green","green, yellow, red","blue, green, blue","green, yellow, red","red, yellow, green",,,,,,,,,,,,,,,,
+310,2,"red, yellow, green","red, yellow, green","red, yellow, green","blue, green, yellow","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+311,2,"red, yellow, green","red, yellow, green","red, yellow, green","blue, green, yellow","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+319,2,"red, yellow, green","red, yellow, green","yellow, red, green","blue, green, yellow","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,3
+325,2,"red, yellow, green","red, yellow, green","yellow, red, green","blue, green, blue","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+326,2,"red, yellow, green","red, yellow, green","red, yellow, green","blue, green, yellow","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+331,2,"green, red, yellow","green, red, yellow","green, red, yellow","blue, green, yellow","red, green, yellow","green, red, yellow",,,,,,,,,,,,,,,,
+346,2,"blue, red","blue, red","red, blue, yellow","blue, red, yellow","red, blue, black","blue, red",,,,,,,,,,,,,,,,
+351,2,"yellow, blue, red","yellow, blue, red","yellow, blue, green","blue, green, red","red, yellow, blue","yellow, blue, red",,,,,,,,,,,,,,,,
+352,2,"yellow, blue, red","yellow, blue","yellow, blue, green","blue, green, yellow","red, yellow, blue","yellow, blue",,,,,,,,,,,,,,,,
+366,2,"red, yellow, blue","red, yellow, blue","red, yellow, blue","blue, red, yellow","red, yellow, blue","red, yellow, blue",,,,,,,,,,,,,,,,
+367,2,"green, red, blue","green, red, blue","green, red, blue","green, blue, yellow","red, blue, green","green, red, blue",,,,,,,,,,,,,,,,
+372,2,"yellow, green, red, blue","yellow, green, red, blue","yellow, green, red, blue","blue, green, yellow","red, yellow, green, blue","yellow, green, red, blue",,,,,,,,,,,,,,,,
+373,2,"green, yellow, red, blue","green, yellow, red, blue","red, yellow, green, blue","blue, green, yellow, red","red, yellow, green","green, yellow, red, blue",,,,,,,,,,,,,,,,
+387,2,"blue, green, red, yellow","blue, green, red, yellow","green, yellow, red, blue","blue, green, yellow","red, yellow, green, blue","blue, green, red, yellow",,,,,,,,,,,,,,,,
+388,2,"blue, green, red, yellow","blue, green, red, yellow","green, yellow, red, blue","blue, yellow, red","blue, red, yellow","blue, red, yellow, green",,,,,,,,,,,,,,,,3
+392,2,"red, green, yellow, blue","red, green, yellow, blue","green, yellow, red, blue","blue, green, yellow, red","red, yellow, green, blue","red, green, yellow, blue",,,,,,,,,,,,,,,,
+393,2,"red, green, yellow, blue","red, green, yellow, blue","green, yellow, red, blue","blue, green, yellow, red","red, yellow, green","red, green, yellow, blue",,,,,,,,,,,,,,,,
+413,2,"blue, green, red","blue, green, red","green, red, blue, green","blue, yellow, red","blue, red, green","blue, green, red",,,,,,,,,,,,,,,,2
+416,2,"blue, yellow, green","blue, yellow, green","green, yellow, blue","blue, green, red","green, yellow, blue","blue, yellow, green",,,,,,,,,,,,,,,,
+417,2,"blue, yellow, green","blue, yellow, green","green, yellow, blue","blue, green, yellow","blue, green, yellow","blue, yellow, green",,,,,,,,,,,,,,,,
+433,2,"blue, red","blue, red"," red, blue","blue, white, red","red, blue, white","blue, red",,,,,,,,,,,,,,,,2
+434,2,"blue, red","blue, red","red, blue, white","blue, orange, white","blue, red, white","blue, red",,,,,,,,,,,,,,,,4
+437,2,"blue, red","blue, red","red, blue, yellow",blue red,"red, blue, black","blue, red",,,,,,,,,,,,,,,,
+438,2,"red, blue","red, blue"," red, blue","blue, red, white","red, blue, black","red, blue",,,,,,,,,,,,,,,,
+440,2,"red, blue","red, blue"," red, blue","blue, red, blue","red, blue, white","red, blue",,,,,,,,,,,,,,,,
+454,2,"red, blue, green, yellow","red, blue, green, yellow","green, blue, yellow, red","blue, green, red","red, blue, yellow","red, blue, green, yellow",,,,,,,,,,,,,,,,2
+458,2,"green, red, blue, yellow","green, red, blue, yellow","red, green, yellow, blue","green, blue, yellow","red, yellow, green, blue","green, red, blue, yellow",,,,,,,,,,,,,,,,
+460,2,"red, yellow, green, blue","red, yellow, green, blue","yellow, green, red, blue","blue, green, red","red, yellow, green, blue","red, yellow, green, blue",,,,,,,,,,,,,,,,
+464,2,"yellow, red, green, blue","yellow, red, green, blue","green, yellow, red, blue","blue, green, yellow","red, yellow, green","yellow, red, green, blue",,,,,,,,,,,,,,,,
+474,2,"green, yellow, red","green, yellow, red","green, yellow, red","blue, green, yellow","red, yellow, green","green, yellow red",,,,,,,,,,,,,,,,4
+478,2,"red, green, yellow","red, green, yellow","green, yellow, red","blue, green, yellow","red, green, yellow","red, green, yellow",,,,,,,,,,,,,,,,
+479,2,"red, yellow, green","red, yellow, green","yellow, red, green","blue, green, red","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+480,2,"red, yellow, green","red, yellow, green","yellow, red, green","blue, green, yellow","red, yellow, green","red, yellow, green",,,,,,,,,,,,,,,,
+481,2,"yellow, blue, green","yellow, blue, green","yellow, blue, green","blue, green, yellow","green, yellow, blue","yellow, blue, green",,,,,,,,,,,,,,,,
+484,2,"yellow, blue, green","yellow, blue, green","green, blue, yellow","blue, green, yellow","green, yellow, blue","yellow, blue, green",,,,,,,,,,,,,,,,
+485,2,"green, yellow, blue","green, yellow, blue","yellow, green, blue","green, blue, yellow","blue, green, yellow","green, yellow, blue",,,,,,,,,,,,,,,,
+499,2,"yellow, blue","yellow, blue","yellow, blue, yellow","blue, red, yellow","blue, yellow, white","yellow, blue",,,,,,,,,,,,,,,,
+504,2,"green, blue, yellow","green, blue, yellow","green, yellow, blue","green, blue, yellow","green, blue, yellow","green, blue, yellow",,,,,,,,,,,,,,,,
+505,2,"green, blue, yellow","green, blue, yellow","yellow, blue, green","green, blue, yellow","blue, yellow, green","green, blue, yellow",,,,,,,,,,,,,,,,
+509,2,"green, blue, yellow","green, blue, yellow","green, blue, yellow","green, blue, red","blue, green, yellow","green, blue, yellow",,,,,,,,,,,,,,,,
+510,2,"green, blue, red, yellow","green, blue, red, yellow","green, blue, red, yellow","green, blue, yellow","green, red, yellow","green, blue, red, yellow",,,,,,,,,,,,,,,,
+1,3,0,0,1,1,1,1,,,,,,,,,,,,,,,,
+3,3,1,1,1,1,1,1,,,,,,,,,,,,,,,,
+5,3,1,0,1,1,1,1,,,,,,,,,,,,,,,,
+7,3,1,1,1,1,1,1,,,,,,,,,,,,,,,,
+18,3,0,1,1,1,1,0,,,,,,,,,,,,,,,,
+20,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,0
+22,3,0,1,1,1,1,1,,,,,,,,,,,,,,,,5
+38,3,1,1,1,1,1,0,,,,,,,,,,,,,,,,
+40,3,1,1,1,1,1,1,,,,,,,,,,,,,,,,15
+42,3,1,0,1,1,1,0,,,,,,,,,,,,,,,,5
+44,3,1,0,1,1,1,1,,,,,,,,,,,,,,,,5
+62,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,30
+63,3,1,0,0,1,1,1,,,,,,,,,,,,,,,,
+64,3,0,0,0,1,1,1,,,,,,,,,,,,,,,,15
+65,3,0,0,1,1,1,1,,,,,,,,,,,,,,,,
+67,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+85,3,1,1,1,1,1,0,,,,,,,,,,,,,,,,
+87,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+89,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+91,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+105,3,0,0,0,1,1,1,,,,,,,,,,,,,,,,
+111,3,1,1,0,1,1,0,,,,,,,,,,,,,,,,
+121,3,0,1,1,1,1,0,,,,,,,,,,,,,,,,75
+125,3,0,1,0,1,1,1,,,,,,,,,,,,,,,,
+126,3,0,0,1,1,1,1,,,,,,,,,,,,,,,,
+131,3,1,1,1,1,1,1,,,,,,,,,,,,,,,,
+132,3,1,1,0,1,1,1,,,,,,,,,,,,,,,,
+146,3,1,1,0,1,1,1,,,,,,,,,,,,,,,,
+147,3,0,0,1,1,1,1,,,,,,,,,,,,,,,,
+152,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+166,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+167,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+172,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+173,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+187,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+188,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+193,3,1,1,0,1,1,0,,,,,,,,,,,,,,,,
+194,3,1,1,1,1,1,1,,,,,,,,,,,,,,,,
+213,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+214,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,40
+217,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+234,3,1,0,0,1,1,1,,,,,,,,,,,,,,,,50
+237,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+238,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+240,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+254,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,8
+258,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+259,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+260,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+261,3,1,1,0,1,1,0,,,,,,,,,,,,,,,,
+275,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,35
+279,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+280,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+281,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+285,3,1,1,1,1,1,0,,,,,,,,,,,,,,,,
+295,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,50
+299,3,1,1,1,1,1,1,,,,,,,,,,,,,,,,
+304,3,0,1,0,1,1,0,,,,,,,,,,,,,,,,
+305,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+310,3,1,0,1,1,1,0,,,,,,,,,,,,,,,,
+311,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+319,3,1,0,1,1,1,0,,,,,,,,,,,,,,,,15
+325,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+326,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+331,3,1,1,0,1,1,0,,,,,,,,,,,,,,,,
+346,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,
+351,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+352,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+366,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+367,3,1,0,1,1,1,1,,,,,,,,,,,,,,,,
+372,3,0,1,1,1,1,1,,,,,,,,,,,,,,,,
+373,3,1,0,1,1,1,1,,,,,,,,,,,,,,,,
+387,3,0,1,1,1,0,0,,,,,,,,,,,,,,,,
+388,3,1,1,1,1,1,0,,,,,,,,,,,,,,,,80
+392,3,0,1,0,1,1,1,,,,,,,,,,,,,,,,
+393,3,0,1,1,1,1,0,,,,,,,,,,,,,,,,
+413,3,1,0,1,1,1,1,,,,,,,,,,,,,,,,0
+416,3,0,0,0,1,1,1,,,,,,,,,,,,,,,,
+417,3,0,0,0,1,1,1,,,,,,,,,,,,,,,,
+433,3,0,0,0,1,1,0,,,,,,,,,,,,,,,,0
+434,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,20
+437,3,1,0,0,1,1,1,,,,,,,,,,,,,,,,
+438,3,1,1,0,1,1,0,,,,,,,,,,,,,,,,
+440,3,1,0,0,1,1,0,,,,,,,,,,,,,,,,
+454,3,0,1,1,1,1,0,,,,,,,,,,,,,,,,80
+458,3,1,1,1,1,1,0,,,,,,,,,,,,,,,,
+460,3,1,0,0,1,1,1,,,,,,,,,,,,,,,,
+464,3,1,0,1,1,1,1,,,,,,,,,,,,,,,,
+474,3,1,0,0,1,1,1,,,,,,,,,,,,,,,,10
+478,3,1,0,1,1,1,0,,,,,,,,,,,,,,,,
+479,3,1,1,0,1,1,0,,,,,,,,,,,,,,,,
+480,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+481,3,1,0,1,1,1,0,,,,,,,,,,,,,,,,
+484,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+485,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+499,3,1,0,1,1,1,1,,,,,,,,,,,,,,,,
+504,3,0,0,1,1,1,0,,,,,,,,,,,,,,,,
+505,3,1,0,1,1,1,0,,,,,,,,,,,,,,,,
+509,3,1,0,,1,1,0,,,,,,,,,,,,,,,,
+510,3,0,0,1,1,1,1,,,,,,,,,,,,,,,,

@@ -1,0 +1,71 @@
+---
+title: "04_astronaut_lme"
+output: html_notebook
+---
+
+```{r}
+# Install packages
+library(brms)
+library(lme4)
+library(tidyverse)
+library(stringr)
+
+# Set variables
+subjects = list("FUYU", "OTTER", "ADAPTER", "GPT-4V", "CLAUDE-3")
+setwd("~/Documents/Projects/multimodal/dataframes/04_astronaut")
+
+# Pre-allocate output array
+out_cost <- matrix(data=NA,nrow=length(subjects),ncol=3)
+out_reward <- matrix(data=NA,nrow=length(subjects),ncol=3)
+```
+
+```{r}
+for (ind in seq_along(subjects)) {
+  
+  # Load data for each individual model
+  print(str_glue("{subjects[[ind]]}"))
+  temp <- read.csv(str_glue("{subjects[[ind]]}_cost.csv"))
+  
+  # Only compute model if there is more than 1 non NA response
+  if (sum(!is.na(unique(temp$Model))) > 1) {
+  
+    # Regression with random slope but no intercept (fixed at 0)
+    temp.lm <- brm(scale(Model)~-1+Human, data=temp, iter=4000, control = list(adapt_delta = 0.95))
+    print(summary(temp.lm))
+    
+    # Save to output
+    out[ind, 1] = fixef(temp.lm)[1]
+    out[ind, 2] = fixef(temp.lm)[3]
+    out[ind, 3] = fixef(temp.lm)[4]
+  }
+}
+
+# Write
+write.table(out, file="04_cost_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
+```
+
+```{r}
+for (ind in seq_along(subjects)) {
+  
+  # Load data for each individual model
+  print(str_glue("{subjects[[ind]]}"))
+  temp <- read.csv(str_glue("{subjects[[ind]]}_reward.csv"))
+  
+  # Only compute model if there is more than 1 non NA response
+  if (sum(!is.na(unique(temp$Model))) > 1) {
+  
+    # Regression with random slope but no intercept (fixed at 0)
+    temp.lm <- brm(scale(Model)~-1+Human, data=temp, iter=4000, control = list(adapt_delta = 0.95))
+    print(summary(temp.lm))
+    
+    # Save to output
+    out[ind, 1] = fixef(temp.lm)[1]
+    out[ind, 2] = fixef(temp.lm)[3]
+    out[ind, 3] = fixef(temp.lm)[4]
+  }
+}
+
+# Write
+write.table(out, file="04_reward_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
+```
+

@@ -1,0 +1,58 @@
+---
+title: "01_towers_lme"
+output: html_notebook
+---
+
+```{r}
+# Install packages
+library(brms)
+library(lme4)
+library(tidyverse)
+library(stringr)
+
+# Set variables
+subjects = list("FUYU", "OTTER", "ADAPTER", "GPT-4V", "CLAUDE-3", "HUMAN")
+setwd("~/Documents/Projects/multimodal/dataframes/01_towers")
+
+# Pre-allocate output array
+out <- matrix(data=NA,nrow=length(subjects),ncol=3)
+```
+
+```{r}
+for (ind in seq_along(subjects)) {
+  
+  # Load data for each individual model
+  print(str_glue("{subjects[[ind]]}"))
+  temp <- read.csv(str_glue("{subjects[[ind]]}_stability.csv"))
+  
+  # Only compute model if there is more than 1 non NA response
+  if (sum(!is.na(unique(temp$Model))) > 1) {
+    
+    # Binomial regression with random slope but no intercept (fixed at 0)
+    if (subjects[[ind]] == "HUMAN"){
+      temp$Model = as.integer(temp$Model)
+      temp$TOTAL = length(unique(temp$Ind))
+      temp.lm <- brm(Model | trials(TOTAL) ~1+Human+(1+Human|Ind),
+                     data=temp, binomial(link = "logit"), iter=4000, control = list(adapt_delta = 0.95))
+  
+    # Logit regression with random slope but no intercept (fixed at 0)
+    } else{
+      temp.lm <- brm(Model~1+Human+(1+Human|Ind), data=temp, 
+                     family = bernoulli(link = "logit"), iter=4000, control = list(adapt_delta = 0.95))
+    }
+      
+    # Print output
+    print(summary(temp.lm))
+    print(bayes_R2(temp.lm))
+    R2 <- bayes_R2(temp.lm)
+    
+    # Multiply with sign of coefficient again and save to output
+    out[ind, 1] = sign(fixef(temp.lm)[2, 1]) * sqrt(R2[1])
+    out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+    out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
+  }
+}
+
+# Write
+write.table(out, file="01_towers_lmer.csv", sep = ",", row.names = TRUE, col.names = TRUE)
+```

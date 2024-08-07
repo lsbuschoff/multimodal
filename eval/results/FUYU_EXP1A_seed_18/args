@@ -1,0 +1,7 @@
+{
+    "model": "FUYU",
+    "dataset": "EXP1A",
+    "seed": 18,
+    "batch_size": 1,
+    "epochs": 1
+}

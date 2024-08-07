@@ -1,0 +1,7 @@
+{
+    "model": "FUYU",
+    "dataset": "BTOM",
+    "seed": 18,
+    "batch_size": 1,
+    "epochs": 1
+}
