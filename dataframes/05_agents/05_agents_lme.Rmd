@@ -44,8 +44,15 @@ for (ind in seq_along(subjects)) {
     
     # Multiply with sign of coefficient again and save to output
     out[ind, 1] = sign(fixef(temp.lm)[2, 1]) * sqrt(R2[1])
-    out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
-    out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
+    
+    # If sign is negative, flip lower and upper of CI
+    if ((fixef(temp.lm)[2, 1]) < 0) {
+      out[ind, 3] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+      out[ind, 2] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))        
+    } else {
+      out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+      out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
+    }
   }
 }
 
@@ -80,8 +87,15 @@ for (ind in seq_along(subjects)) {
     
     # Multiply with sign of coefficient again and save to output
     out[ind, 1] = sign(fixef(temp.lm)[2, 1]) * sqrt(R2[1])
-    out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
-    out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
+    
+    # If sign is negative, flip lower and upper of CI
+    if ((fixef(temp.lm)[2, 1]) < 0) {
+      out[ind, 3] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+      out[ind, 2] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))        
+    } else {
+      out[ind, 2] = sqrt(abs(R2[1])) - sqrt(abs(R2[3]))
+      out[ind, 3] = sqrt(abs(R2[4])) - sqrt(abs(R2[1]))
+    }
   }
 }
 
